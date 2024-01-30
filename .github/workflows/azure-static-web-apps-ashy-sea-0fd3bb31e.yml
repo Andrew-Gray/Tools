@@ -20,8 +20,8 @@ jobs:
           git config --global user.name "Andrew Gray"
           git config --global user.email "58016623+Andrew-Gray@users.noreply.github.com"
           chmod -R 777 .  # Change permissions as necessary
-      -  name:  Disable  CI  
-      - run:  echo  "CI=false" >> $GITHUB_ENV
+      - name:  Disable  CI  
+        run:  echo  "CI=false" >> $GITHUB_ENV
       
       - uses: actions/checkout@v4
         with:
