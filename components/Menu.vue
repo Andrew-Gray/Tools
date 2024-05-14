@@ -13,7 +13,8 @@
 		{ name: "QR Code Generator", path: "/qr-code" },
 		{ name: "Lorem Ipsum Generator", path: "/lorem-ipsum" },
 		{ name: "HMAC Generator", path: "/hmac" },
-		{ name: "Fake Profile Generator", path: "/fake-profile" }
+		{ name: "Fake Profile Generator", path: "/fake-profile" },
+		{ name: "Winget", path: "/winget" }
 	];
 
 	const handleScroll = () => {
