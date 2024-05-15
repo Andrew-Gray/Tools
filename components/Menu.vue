@@ -43,11 +43,14 @@
 					<Button variant="ghost">Tools <IconArrow class="ms-1 w-4 -rotate-90" /></Button>
 				</DropdownMenuTrigger>
 				<DropdownMenuContent>
-					<DropdownMenuItem
+					<NuxtLink
 						v-for="(item, index) in toolItems"
-						:key="index">
-						<NuxtLink :to="item.path">{{ item.name }}</NuxtLink>
-					</DropdownMenuItem>
+						:key="index"
+						:to="item.path">
+						<DropdownMenuItem class="cursor-pointer p-3">
+							{{ item.name }}
+						</DropdownMenuItem>
+					</NuxtLink>
 				</DropdownMenuContent>
 			</DropdownMenu>
 		</div>
