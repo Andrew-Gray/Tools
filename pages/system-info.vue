@@ -20,7 +20,7 @@
 	const windowHeight = ref(window.innerHeight);
 
 	const ipv4 = await $fetch("https://api.ipify.org/");
-	const ipLocation = await $fetch(`http://ip-api.com/json/${ipv4}?fields=254681`);
+	const ipLocation = await $fetch(`https://ipapi.co/${ipv4}/json/`);
 
 	window.addEventListener("resize", () => {
 		screenWidth.value = window.screen.width;
@@ -80,16 +80,14 @@
 						<TableCell>{{ ipv4 }}</TableCell>
 					</TableRow>
 					<TableRow>
-						<TableCell>IP Location Info</TableCell>
+						<TableCell>IP Information</TableCell>
 						<TableCell>
 							<div>City: {{ ipLocation.city }}</div>
-							<div>Region: {{ ipLocation.regionName }}</div>
-							<div>Country: {{ ipLocation.country }}</div>
-							<div>Latitude: {{ ipLocation.lat }}</div>
-							<div>Longitude: {{ ipLocation.lon }}</div>
-							<div>Internet Service Provider: {{ ipLocation.isp }}</div>
-							<div>Mobile (cellular): {{ ipLocation.mobile }}</div>
-							<div>Proxy, VPN or Tor exit address: {{ ipLocation.proxy }}</div>
+							<div>Region: {{ ipLocation.region }}</div>
+							<div>Country: {{ ipLocation.country_name }}</div>
+							<div>Latitude: {{ ipLocation.latitude }}</div>
+							<div>Longitude: {{ ipLocation.longitude }}</div>
+							<div>Internet Service Provider: {{ ipLocation.org }}</div>
 						</TableCell>
 					</TableRow>
 				</TableBody>
