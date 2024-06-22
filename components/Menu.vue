@@ -14,7 +14,8 @@
 		{ name: "Lorem Ipsum Generator", path: "/lorem-ipsum" },
 		{ name: "HMAC Generator", path: "/hmac" },
 		{ name: "Fake Profile Generator", path: "/fake-profile" },
-		{ name: "Winget", path: "/winget" }
+		{ name: "Winget", path: "/winget" },
+		{ name: "System Info", path: "/system-info" }
 	];
 
 	const handleScroll = () => {
