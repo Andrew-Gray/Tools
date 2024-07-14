@@ -3,9 +3,11 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "shadcn-nuxt"],
+
   colorMode: {
     classSuffix: ''
   },
+
   shadcn: {
     /**
      * Prefix for all the imported component
@@ -17,6 +19,7 @@ export default defineNuxtConfig({
      */
     componentDir: './components/ui'
   },
+
   webpack: {
     extractCSS: true,
     optimization: {
@@ -32,4 +35,6 @@ export default defineNuxtConfig({
       }
     }
   },
+
+  compatibilityDate: "2024-07-14",
 })
