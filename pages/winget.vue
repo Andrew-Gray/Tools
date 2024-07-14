@@ -29,6 +29,7 @@
 			title: "Gaming Launchers",
 			apps: [
 				{ id: "Valve.Steam", name: "Steam", source: "winget", url: "https://store.steampowered.com", selected: false },
+				{ id: "Valve.SteamLink", name: "Steam Link", source: "winget", url: "https://store.steampowered.com/remoteplay", selected: false },
 				{ id: "ElectronicArts.EADesktop", name: "EA App", source: "winget", url: "https://www.ea.com/ea-app", selected: false },
 				{ id: "EpicGames.EpicGamesLauncher", name: "Epic Games", source: "winget", url: "https://store.epicgames.com", selected: false },
 				{ id: "Amazon.Games", name: "Amazon Games", source: "winget", url: "https://www.amazongames.com/support/prime-gaming/articles/download-and-install-the-amazon-games-app", selected: false }
@@ -47,8 +48,8 @@
 			]
 		},
 		{
-			section: "Code",
-			title: "Code",
+			section: "DeveloperTools",
+			title: "Developer Tools",
 			apps: [
 				{ id: "Microsoft.VisualStudioCode", name: "Visual Studio Code", source: "winget", url: "https://code.visualstudio.com", selected: false },
 				{ id: "VSCodium.VSCodium", name: "VS Codium", source: "winget", url: "https://vscodium.com", selected: false },
@@ -62,7 +63,13 @@
 				{ id: "Microsoft.AzureDataStudio", name: "Azure Data Studio", source: "winget", url: "https://azure.microsoft.com/products/data-studio", selected: false },
 				{ id: "Microsoft.SQLServerManagementStudio", name: "Microsoft SQL Server Management Studio", source: "winget", url: "https://learn.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16", selected: false },
 				{ id: "Microsoft.SQLServer.2022.Express", name: "Microsoft SQL Server 2022 Express", source: "winget", url: "https://www.microsoft.com/en-ca/sql-server/sql-server-2022", selected: false },
-				{ id: "Microsoft.SQLServer.2022.Developer", name: "Microsoft SQL Server 2022 Developer", source: "winget", url: "https://www.microsoft.com/en-ca/sql-server/sql-server-2022", selected: false },
+				{ id: "Microsoft.SQLServer.2022.Developer", name: "Microsoft SQL Server 2022 Developer", source: "winget", url: "https://www.microsoft.com/en-ca/sql-server/sql-server-2022", selected: false }
+			]
+		},
+		{
+			section: "LanguagesRuntimes",
+			title: "Languages & Runtimes",
+			apps: [
 				{ id: "Python.Python.3.12", name: "Python 3.12", source: "winget", url: "https://www.python.org", selected: false },
 				{ id: "Python.Python.3.11", name: "Python 3.11", source: "winget", url: "https://www.python.org", selected: false },
 				{ id: "Python.Python.3.10", name: "Python 3.10", source: "winget", url: "https://www.python.org", selected: false },
@@ -76,7 +83,8 @@
 				{ id: "Oracle.JavaRuntimeEnvironment", name: "Oracle Java Runtime Environment", source: "winget", url: "https://www.oracle.com/java", selected: false },
 				{ id: "Oracle.JDK.22", name: "Oracle JDK 22", source: "winget", url: "https://www.oracle.com/java/technologies/downloads/#java22", selected: false },
 				{ id: "Oracle.JDK.21", name: "Oracle JDK 21", source: "winget", url: "https://www.oracle.com/java/technologies/downloads/#java21", selected: false },
-				{ id: "Oracle.JDK.20", name: "Oracle.JDK.17", source: "winget", url: "https://www.oracle.com/java/technologies/downloads/#java17", selected: false }
+				{ id: "Oracle.JDK.20", name: "Oracle.JDK.17", source: "winget", url: "https://www.oracle.com/java/technologies/downloads/#java17", selected: false },
+				{ id: "GoLang.Go", name: "Go", source: "winget", url: "https://go.dev", selected: false }
 			]
 		},
 		{
@@ -142,7 +150,7 @@
 		},
 		{
 			section: "StorageBackups",
-			title: "Storage/Backups",
+			title: "Storage & Backups",
 			apps: [
 				{ id: "Google.GoogleDrive", name: "Google Drive", source: "winget", url: "https://www.google.com/drive/download", selected: false },
 				{ id: "Microsoft.OneDrive", name: "Microsoft OneDrive", source: "winget", url: "https://www.microsoft.com/microsoft-365/onedrive/online-cloud-storage", selected: false },
@@ -196,7 +204,7 @@
 	const clear = () => {
 		options.forEach((section) => {
 			section.apps.forEach((app) => {
-				app = false;
+				app.selected = false;
 			});
 		});
 	};
